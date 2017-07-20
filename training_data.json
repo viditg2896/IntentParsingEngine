@@ -1,0 +1,3792 @@
+{
+    "rasa_nlu_data": {
+        "entity_synonyms": [{
+                "value": "Amenity",
+                "synonyms": ["Television", "TV", "LED", "Parking", "LCDTV", "HDTV", "Plasma", "Parking Space", "Free WiFi", "Caretaker", "24 hour Security", "Kitchen", "Complimentary Breakfast", "Terrace", "Gymnasium", "Room Service", "Lockers", "Safe", "Elevator", "Sound Proof", "Laundry", "Power Back Up", "Front Desk", "Servant Quarter", "Fridge", "Refrigerator", "Dining Space", "Dressing Table", "Bathtub", "Geyser", "Shower Panel", "Toiletries", "Slippers", "breakfast", "dinner", "swimming pool", "sauna", "lcd", "tvs", "restaurant", "air conditioning", "bathroom", "dryer", "telephone", "t.v.", "Fans", "Air conditioner", "microwave", "internet access", "balcony", "pool", "fireplace", "hair dryer", "hairdryer", "WiFi", "jacuzzi", "kitchenette", "cable tv", "minibar", "shower", "bar", "satellite tv", "dishwasher", "tub", "meal", "meals", "snacks", "snack", "fooding", "bathrooms", "extra-bed", "campfire", "bonfire", "drink", "sat tv", "garden", "internet", "washing machine", "washer", "heating", "lounge", "spa", "mini bar", "patio", "bath", "garage", "Housekeeping", "amenities", "playground", "LED / LCD", "Trekking", "Fishing", "Star gazing", "Trampoline", "Camping", "Indoor games", "Bonfire", "Outdoor games", "Nature walks", "Barbeque", "Yoga", "Paragliding", "Local Sightseeing", "Surfing", "Jungle Safari", "Scuba Diving", "Safari", "Village Walk", "Cultural Programmes", "clubhouse", "security", "restaurants", "parks", "pickup", "gym", "driver accomodation", "extrabed"]
+            },
+            {
+                "value": "Available",
+                "synonyms": ["Available", "Availability", "Vacancy", "vacancies"]
+            },
+            {
+                "value": "HouseRule",
+                "synonyms": ["no smoking allowed", "unmarried couples not allowed", "pets not allowed", "no loud music", "bachelors not allowed", "non - vegetarian food not allowed", "dog", "cat", "rabbit", "smoking", "bachelors", "non - vegetarian", "pet", "No smoking inside the room", "No drinking inside the property", "Unmarried couples not allowed", "Pets not allowed", "No loud music", "No outside food allowed", "No smoking in the property", "Only families allowed", "Bachelors not allowed", "Bachelor groups not allowed", "Kids not allowed", "Non - vegetarian food not allowed", "liquor", "beer", "lager", "beers", "drink", "rules", "wine", "restrictions", "regulations", "prohibitions", "whiskey", "alcohol", "smoke", "drinking", "ale", "boozebitions", "whiskey", "alcohol", "smoke", "drinking", "ale", "booze"]
+            },
+            {
+                "value": "Information",
+                "synonyms": ["Details", "Enquiry", "inquiry", "specifics", "enquiries", "detailed information", "detail", "minutiae"]
+            },
+            {
+                "value": "Tariff",
+                "synonyms": ["Tariff", "Cost", "Price", "Charge", "Rate", "Fee", "Dues", "costing", "tax", "estimate", "expenditure", "discount", "payment", "guesstimate"]
+            },
+            {
+                "value": "PropertyType",
+                "synonyms": ["Apartment", "Guest house", "Villa", "Bungalow", "Farm house", "Cottage", "Heritage", "Tent", "Houseboat", "Yacht", "Wood villa", "Holiday home", "Hostel", "Hut", "Lodge", "Homestay", "Private room", "Dormitory", "Resort", "Tree house", "Boutique Suite", "Camp", "PG"]
+            },
+            {
+                "value": "Location",
+                "synonyms": ["Location", "Address", "Distance", "How far", "vicinity", "locations", "proximity", "near", "where is it ?", "proper address", "property address"]
+            }
+        ],
+        "common_examples": [{
+                "text": "will it rain today?",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain tomorrow?",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it raining in seattle",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "raining",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle tomorrow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "dinner",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 0,
+                    "end": 6,
+                    "value": "dinner",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have parking?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 19,
+                    "value": "parking",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "are pets allowed?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 4,
+                    "end": 8,
+                    "value": "pets",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i bring my dog?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 15,
+                    "end": 18,
+                    "value": "dog",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "will it rain in boston",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it snowing in moscow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "snowing",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to rain in seattle today",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is there rain in new york city",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 9,
+                    "end": 13,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to snow in san jose",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "snow",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in seattle",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in san francisco",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in san diego",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it snowing in new york city",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "snowing",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it snowing in denver",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "snowing",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to snow in vancouver",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "snow",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to snow in toronto",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "snow",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it snowy in toronto",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "snowy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in boston",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it snowing in boston",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "snowing",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in istanbul",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it snowing in miami",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "snowing",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it snow in orlando",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "snow",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in austin",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to rain in seattle",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in new york city tomorrow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "was it raining in boston yesterday",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 7,
+                    "end": 14,
+                    "value": "raining",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle on wednesday",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it rainy in seattle right now",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "rainy",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it drizzle in boston tomorrow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 15,
+                    "value": "drizzle",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will there be fog in san francisco tomorrow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 14,
+                    "end": 17,
+                    "value": "fog",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to rain in boston",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "any chance of rain in seattle",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 14,
+                    "end": 18,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to snow in seattle",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "snow",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to rain in vancouver",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it snow in seattle tomorrow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "snow",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it going to rain in 02141",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 15,
+                    "end": 19,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it be raining on 94107 tomorrow",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 11,
+                    "end": 18,
+                    "value": "raining",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle next tuesday",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle this friday",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it raining in seattle right now",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "raining",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle today",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in seattle on friday",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in oakland next month",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it be raining in oakland next monday",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 11,
+                    "end": 18,
+                    "value": "raining",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain in wilmington nc tomorrow?",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "is it raining in san francisco",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 6,
+                    "end": 13,
+                    "value": "raining",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "will it rain ?",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "do you have a swimming pool?",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 14,
+                        "end": 22,
+                        "value": "swimming",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 23,
+                        "end": 27,
+                        "value": "pool",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "can i bring my pet?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 15,
+                    "end": 18,
+                    "value": "pet",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "television?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 0,
+                    "end": 10,
+                    "value": "television",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have a kitchen?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 14,
+                    "end": 21,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "is smoking allowed?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 3,
+                    "end": 10,
+                    "value": "smoking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "will it rain that day?",
+                "intent": "GetWeather",
+                "entities": [{
+                    "start": 8,
+                    "end": 12,
+                    "value": "rain",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "do you have a tv?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 14,
+                    "end": 16,
+                    "value": "tv",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "led tv?",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 0,
+                        "end": 3,
+                        "value": "led",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 4,
+                        "end": 6,
+                        "value": "tv",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "do you have a television?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 14,
+                    "end": 24,
+                    "value": "television",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have fitnesscentre?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 25,
+                    "value": "fitnesscentre",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have fitness centre?",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 12,
+                        "end": 19,
+                        "value": "fitness",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 20,
+                        "end": 26,
+                        "value": "centre",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "do you have fitnesscenter?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 25,
+                    "value": "fitnesscenter",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have fitness center?",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 12,
+                        "end": 19,
+                        "value": "fitness",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 20,
+                        "end": 26,
+                        "value": "center",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "do you have ledtv?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 17,
+                    "value": "ledtv",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have swimming?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 20,
+                    "value": "swimming",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "can i play loud music?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 11,
+                        "end": 15,
+                        "value": "loud",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 16,
+                        "end": 21,
+                        "value": "music",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "are bachelors allowed?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 4,
+                    "end": 13,
+                    "value": "bachelors",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i smoke at the property?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 6,
+                    "end": 11,
+                    "value": "smoke",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "are unmarried couples allowed?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 4,
+                        "end": 13,
+                        "value": "unmarried",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 14,
+                        "end": 21,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "do you have any conditions or rules?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 16,
+                        "end": 26,
+                        "value": "conditions",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 30,
+                        "end": 35,
+                        "value": "rules",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "can you tell the house rules?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 17,
+                        "end": 22,
+                        "value": "house",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 23,
+                        "end": 28,
+                        "value": "rules",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "what are the house rules?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 13,
+                        "end": 18,
+                        "value": "house",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 19,
+                        "end": 24,
+                        "value": "rules",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "can i get my cat?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 13,
+                    "end": 16,
+                    "value": "cat",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i come with my girlfriend?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 19,
+                    "end": 29,
+                    "value": "girlfriend",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i come with my boyfriend?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 19,
+                    "end": 28,
+                    "value": "boyfriend",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i come with my bf?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 19,
+                    "end": 21,
+                    "value": "bf",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i come with my gf?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 19,
+                    "end": 21,
+                    "value": "gf",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i bring my bf?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 15,
+                    "end": 17,
+                    "value": "bf",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i bring my gf?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 15,
+                    "end": 17,
+                    "value": "gf",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can i get my pet?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 13,
+                    "end": 16,
+                    "value": "pet",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "do you have 24 hour security?",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 12,
+                        "end": 14,
+                        "value": "24",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 15,
+                        "end": 19,
+                        "value": "hour",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 20,
+                        "end": 28,
+                        "value": "security",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "do you have a terrace?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 14,
+                    "end": 21,
+                    "value": "terrace",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have refrigerator?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 24,
+                    "value": "refrigerator",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have restuarant?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 22,
+                    "value": "restuarant",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have geyser?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 12,
+                    "end": 18,
+                    "value": "geyser",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "we are bachelors",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 7,
+                    "end": 16,
+                    "value": "bachelors",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "what about unmarried couples?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 11,
+                        "end": 20,
+                        "value": "unmarried",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 21,
+                        "end": 28,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "kitchen is there ??",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 0,
+                    "end": 7,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "my kids want room with bathtub.",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 23,
+                    "end": 30,
+                    "value": "bathtub",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "need kitchen facility",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 5,
+                    "end": 12,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "please arrange bedtea breakfast dinner.",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 22,
+                        "end": 31,
+                        "value": "breakfast",
+                        "entity": "Amenity"
+                    },
+                    {
+                        "start": 32,
+                        "end": 38,
+                        "value": "dinner",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "food menu with veg and non-veg options",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 15,
+                    "end": 18,
+                    "value": "veg",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "need daily breakfast",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 11,
+                    "end": 20,
+                    "value": "breakfast",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "kitchen must",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 0,
+                    "end": 7,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "tv available?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 0,
+                    "end": 2,
+                    "value": "tv",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "what all equipments we can get in kitchen???",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 34,
+                    "end": 41,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "can we have sharing kitchen for the same",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 20,
+                    "end": 27,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "we plan to get our own beers and ask the caretaker for food",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 41,
+                    "end": 50,
+                    "value": "caretaker",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "whether lockers will be available in each room.",
+                "intent": "getAmenities",
+                "entities": [{
+                        "start": 24,
+                        "end": 33,
+                        "value": "available",
+                        "entity": "precipitationType"
+                    },
+                    {
+                        "start": 8,
+                        "end": 15,
+                        "value": "lockers",
+                        "entity": "Amenity"
+                    }
+                ]
+            },
+            {
+                "text": "do u provide fridge too",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 13,
+                    "end": 19,
+                    "value": "fridge",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "does it includes breakfast?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 17,
+                    "end": 26,
+                    "value": "breakfast",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "is the pool operational.",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 7,
+                    "end": 11,
+                    "value": "pool",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "is parking available for 2 vehicles?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 3,
+                    "end": 10,
+                    "value": "parking",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "kitchen with gas stove and vessels.?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 0,
+                    "end": 7,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "and is there is a provision for a kitchenette?",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 34,
+                    "end": 45,
+                    "value": "kitchenette",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "sir we need a fridge also",
+                "intent": "getAmenities",
+                "entities": [{
+                    "start": 14,
+                    "end": 20,
+                    "value": "fridge",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "kindly let me know the tariff for 4 adults at the above mentioned dates and are meals included in this?",
+                "intent": "getInventory",
+                "entities": [{
+                    "start": 80,
+                    "end": 85,
+                    "value": "meals",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "does the cost include meals?",
+                "intent": "getInventory",
+                "entities": [{
+                    "start": 22,
+                    "end": 27,
+                    "value": "meals",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "is it included in the cost?",
+                "intent": "getInventory",
+                "entities": [{
+                    "start": 6,
+                    "end": 14,
+                    "value": "included",
+                    "entity": "precipitationType"
+                }]
+            },
+            {
+                "text": "hi coming with my gf is it possible to stay in your premises.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 18,
+                    "end": 20,
+                    "value": "gf",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "i would like to know your rules regarding age of kids.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 26,
+                    "end": 31,
+                    "value": "rules",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "as mentioned in home rules that unmarried couples are not allowed will be able to make an exception in our case.",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 21,
+                        "end": 26,
+                        "value": "rules",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 32,
+                        "end": 41,
+                        "value": "unmarried",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 42,
+                        "end": 49,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "hi what are the house rules?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 16,
+                        "end": 21,
+                        "value": "house",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 22,
+                        "end": 27,
+                        "value": "rules",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "we would like to know whether a girl in our group will be a problem with you as its written in the house rules that no unmarried couples allowed.",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 105,
+                        "end": 110,
+                        "value": "rules",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 129,
+                        "end": 136,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "we are not happy with the rules",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 26,
+                    "end": 31,
+                    "value": "rules",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "could you advise if this is ok with you as your property rules mention you don't rent to unmarried couples.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 57,
+                    "end": 62,
+                    "value": "rules",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "your house seems suitable with price but your rules are strict . can there be any change for rules",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 93,
+                    "end": 98,
+                    "value": "rules",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "we have one 1 year old baby with us per your rules kids are not allowed so is it ok ?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 45,
+                    "end": 50,
+                    "value": "rules",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "also are there any open areas or balconies where one can smoke ?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 57,
+                    "end": 62,
+                    "value": "smoke",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is the place available for bacherlor - boys and girls mix group.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 27,
+                    "end": 36,
+                    "value": "bacherlor",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can we smoke in the rooms.?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 7,
+                    "end": 12,
+                    "value": "smoke",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "hi we are unmarried couple shortly to be engaged...... i just wanted to ask if smoking is allowed .... as my would b hubby smokes!",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 79,
+                    "end": 86,
+                    "value": "smoking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "drinks and smoke allowed?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 11,
+                    "end": 16,
+                    "value": "smoke",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is there any place to smoke hookah or have beer or something?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 22,
+                        "end": 27,
+                        "value": "smoke",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 43,
+                        "end": 47,
+                        "value": "beer",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "hi we are bachelors (male)",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 10,
+                    "end": 19,
+                    "value": "bachelors",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "its written we cant smoke over there thats an issue.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 20,
+                    "end": 25,
+                    "value": "smoke",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is smoking and drinking allowed",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 15,
+                    "end": 23,
+                    "value": "drinking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is drinking allowed?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 3,
+                    "end": 11,
+                    "value": "drinking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is the hotel non-veg smoking and drinking friendly?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 33,
+                    "end": 41,
+                    "value": "drinking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "few of my friends like to drink so just want to confirm is drinking allowed there",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 59,
+                    "end": 67,
+                    "value": "drinking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "do you rent this place to bachelors ?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 26,
+                    "end": 35,
+                    "value": "bachelors",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "can this property be rented by bachelors ?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 31,
+                    "end": 40,
+                    "value": "bachelors",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "bachelors allowed",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 0,
+                    "end": 9,
+                    "value": "bachelors",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "drinking allowed inside cottege",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 0,
+                    "end": 8,
+                    "value": "drinking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is drinking allowed in the property.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 3,
+                    "end": 11,
+                    "value": "drinking",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "what are the restrictions",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 13,
+                    "end": 25,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "would like to know the restrictions if any.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 23,
+                    "end": 35,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "please let me know if there are any restrictions on food.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 36,
+                    "end": 48,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "we want enjoyment with no restrictions.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 26,
+                    "end": 38,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "are there any restrictions on non veg food?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 14,
+                    "end": 26,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "hi sangeeta we are a bachelor couple from delhi and kolkata respectively . any restrictions on that?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 79,
+                    "end": 91,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "sir is there any restrictions for bachelors group or unmarried couples?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 17,
+                        "end": 29,
+                        "value": "restrictions",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 34,
+                        "end": 43,
+                        "value": "bachelors",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 53,
+                        "end": 62,
+                        "value": "unmarried",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 63,
+                        "end": 70,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "sir is there any restrictions for bachelors group or unmarried couples.?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 17,
+                        "end": 29,
+                        "value": "restrictions",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 34,
+                        "end": 43,
+                        "value": "bachelors",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 63,
+                        "end": 70,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "sir is there any restrictions to unmaried couples.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 17,
+                    "end": 29,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "also confirm is there any restriction in using appliances provided in kitchen?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 70,
+                    "end": 77,
+                    "value": "kitchen",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "are there any restrictions in the entry of unmarried couples?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 14,
+                        "end": 26,
+                        "value": "restrictions",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 43,
+                        "end": 52,
+                        "value": "unmarried",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 53,
+                        "end": 60,
+                        "value": "couples",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "we would like to know if there are any smoking and alcohol consumption restrictions in the room?",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 39,
+                        "end": 46,
+                        "value": "smoking",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 51,
+                        "end": 58,
+                        "value": "alcohol",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 71,
+                        "end": 83,
+                        "value": "restrictions",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "can you please tell me the restrictions if any",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 27,
+                    "end": 39,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "restrictions with bringing your own food?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 0,
+                    "end": 12,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "whether if there are any restrictions?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 25,
+                    "end": 37,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "would like know if there are any restrictions.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 33,
+                    "end": 45,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "any specific restrictions during the say?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 13,
+                    "end": 25,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "do you have any restrictions for bachelors",
+                "intent": "getHouseRule",
+                "entities": [{
+                        "start": 16,
+                        "end": 28,
+                        "value": "restrictions",
+                        "entity": "HouseRule"
+                    },
+                    {
+                        "start": 33,
+                        "end": 42,
+                        "value": "bachelors",
+                        "entity": "HouseRule"
+                    }
+                ]
+            },
+            {
+                "text": "no time restrictions should be ......for day nd night.",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 8,
+                    "end": 20,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "is there any security restriction for coming late @12 midnight home?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 13,
+                    "end": 21,
+                    "value": "security",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "hope there are no late night entry restrictions?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 35,
+                    "end": 47,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "so are they any restrictions??",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 16,
+                    "end": 28,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "any restrictions?",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 4,
+                    "end": 16,
+                    "value": "restrictions",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "i need rules and regulation",
+                "intent": "getHouseRule",
+                "entities": [{
+                    "start": 7,
+                    "end": 12,
+                    "value": "rules",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "do you have rooms available for 10 persons from 25 may to 28 may.",
+                "intent": "getInventory",
+                "entities": [{
+                    "start": 12,
+                    "end": 17,
+                    "value": "rooms",
+                    "entity": "Amenity"
+                }]
+            },
+            {
+                "text": "do you have any rooms available?",
+                "intent": "getInventory",
+                "entities": [{
+                    "start": 16,
+                    "end": 21,
+                    "value": "rooms",
+                    "entity": "HouseRule"
+                }]
+            },
+            {
+                "text": "i want to now about the location and how far s it from botanicl garden",
+                "intent": "getLocation",
+                "entities": [{
+                    "start": 64,
+                    "end": 70,
+                    "value": "garden",
+                    "entity": "Amenity"
+                }]
+            }
+        ],
+        "entity_examples": [],
+        "intent_examples": [{
+                "text": "hello",
+                "intent": "Greeting"
+            },
+            {
+                "text": "hi",
+                "intent": "Greeting"
+            },
+            {
+                "text": "weather in seattle",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how are you?",
+                "intent": "Greeting"
+            },
+            {
+                "text": "weather",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "hey",
+                "intent": "Greeting"
+            },
+            {
+                "text": "is it cold?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what's up?",
+                "intent": "Greeting"
+            },
+            {
+                "text": "is it hot?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how cold is it?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how hot is it?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in san francisco",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what about tomorrow",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "hello sir",
+                "intent": "Greeting"
+            },
+            {
+                "text": "weather in new york city",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in chicago",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how much will it cost?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "weather in istanbul",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how about tomorrow",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "where is the hotel?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "weather in san jose",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in san diego",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what is the price?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what's the weather like in vancouver",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in seattle",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what about this friday",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "how's the weather in san francisco",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what about food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "how is the weather in san francisco, ca",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in seattle, wa",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "tell me the weather in toronto",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what is the weather like in atlanta, ga",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "wlkj",
+                "intent": "None"
+            },
+            {
+                "text": "how's the weather in boston",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather in boston",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in miami",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in austin, tx",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather in atlanta",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what is the weather like in toronto",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather in seattle tomorrow",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what is the weather like in boston tomorrow",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how was weather in boston yesterday",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what will be the temperature in boston tomorrow",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "can you tell me the weather in new york city",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "lkhkjg",
+                "intent": "None"
+            },
+            {
+                "text": "dnskf",
+                "intent": "None"
+            },
+            {
+                "text": "lfjds",
+                "intent": "None"
+            },
+            {
+                "text": "how's the weather in chicago",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in 94107",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in 45701",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather in 94103",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in 94101",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in toronto",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's weather in atlanta",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in seattle next friday",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in seattle this friday",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in seattle tomorrow",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in troy",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in wilmington",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in boulder",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "hows weather in seattle",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in wilmington?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in wilmington",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in seattle tomorrow",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how about this friday",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "what was it yesterday",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "how about this wednesday",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "how about this tuesday",
+                "intent": "ChangeTime"
+            },
+            {
+                "text": "how's weather in seattle",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "weather in 45107 next tuesday",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "what is the weather in 28412",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "tell me the location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "hi sir",
+                "intent": "Greeting"
+            },
+            {
+                "text": "what are the costs?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "show me address",
+                "intent": "getLocation"
+            },
+            {
+                "text": "food facility",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "show hotel",
+                "intent": "getLocation"
+            },
+            {
+                "text": "food menu",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "how is the weather in kolkata?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "i want a room for tomorrow",
+                "intent": "getInventory"
+            },
+            {
+                "text": "where is hotel?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "show me map to hotel",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how is the weather in delhi on 24th june 2017",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather in delhi on 30th june 2017",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how's the weather in delhi on 30 june 2017",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather in kota?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "how is the weather on 24th june 2017",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "should i bring my raincoat?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "umbrella?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "should i bring my umbrella?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "mausam kaisa hai?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "should i get warm clothes?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "should i get woolens?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "should i get my jacket?",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "is non-vegetarian food allowed?",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "rain on 29th june 2017",
+                "intent": "GetWeather"
+            },
+            {
+                "text": "coming from bangalore with friends for a weekend visit",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly confirm availability for 3 days accommodation",
+                "intent": "getInventory"
+            },
+            {
+                "text": "pl inform availability of accommodation as per dates indicated. apr 29 - may 1",
+                "intent": "getInventory"
+            },
+            {
+                "text": "need a room from 29th april to may 1st",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly revert with the room availability. thanks",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can you please confirm availability for us to book",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know on the availability on these dates.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what is the total tariff?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "tell more about the property",
+                "intent": "getInfo"
+            },
+            {
+                "text": "need further details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "details about homestay",
+                "intent": "getInfo"
+            },
+            {
+                "text": "details about the property",
+                "intent": "getInfo"
+            },
+            {
+                "text": "can you show photos of the property",
+                "intent": "getInfo"
+            },
+            {
+                "text": "show some pics of the property",
+                "intent": "getInfo"
+            },
+            {
+                "text": "what is the exact location?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "pls call... for details for food facilities & other details",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "pickup from bus stand",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "and what food options do we have?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "do you provide food service?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "you provide any activities what about food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "we want noiseless rooms",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "100% jain food.",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "i want pick from raiway station",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "veg food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "if possible we would prefer western loos",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "what are food charges ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "we want breaksfast and dinner also",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "looking for package include breakfast and dinner",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "need cooking facilities",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "hi! is there fans or aircondition in the apartment?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "western toileteries",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "pure veg food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "do you have maharaj to prepare the food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "send rooms amenities",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "we need cook to prepare veg and jain food.",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "whether jain food is available",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "want pick up from madikeri busstop",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "also what are the arrangements for food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "jain food. mixer grinder.",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "vegetarian food please",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "is food available in the resort?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "pickup from manali bus stand",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "is common sitting room is also air conditioned?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "is bon fire available",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "food available at place or need to arrange from outside ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "i want pikup from airport",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "whether any grocery store near by ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "wanted to know if there is only 1 toilet ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "what about fooding ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "you have facilities like gas stove for basic use like bottle sterilization.",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "campfire option",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "have a indian break fast",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "options for food?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "need homestay with food",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "transport feasibility",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "is there wi fi available at your cottage?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "is bath room available and bengali food like rice????",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "please charges for meals",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "does it supply a milk for my 2 year old kid ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "does it have driver accomodation??",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "hi food are provided?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "how about meals details",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "please confirm amenities and restrictions. also food arrangements.",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "can i get a extra bed in 1 of these rooms ?",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "please tell me the total tariff of 9 rooms for 3 nights mentioned above",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i would like to know about the room details along with the tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "would request you to kindly provide us with a competitive tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly let me know the tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know what is the tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "tariff please",
+                "intent": "getInventory"
+            },
+            {
+                "text": "if we get proper tariff we can book this villa.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what will be tariff for 7 people and stay for 2 nights",
+                "intent": "getInventory"
+            },
+            {
+                "text": "give us best tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is this tariff for whole apparment or a room",
+                "intent": "getInventory"
+            },
+            {
+                "text": "wana know d tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly confirm if this tariff is for the entire property",
+                "intent": "getInventory"
+            },
+            {
+                "text": "2 room tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i am confused with tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i just want ask daily tariff is 1250. is it for 3 bed rooms ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is there any tariff change",
+                "intent": "getInventory"
+            },
+            {
+                "text": "need to clarify tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please share the tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we would like to know how much the tariff will be for a couple for one night",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi i would like to know the tariff for 7-8 people to stay at your dormitory",
+                "intent": "getInventory"
+            },
+            {
+                "text": "sir how much it will cost for 4 nightss..!",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what will be the total cost",
+                "intent": "getInventory"
+            },
+            {
+                "text": "how much is the per day cost",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want to know the cost of rooms for 3 nights and \u0c69 mornings",
+                "intent": "getInventory"
+            },
+            {
+                "text": "how much will be the cost for 2 guest n one room?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "any additional charges is there",
+                "intent": "getInventory"
+            },
+            {
+                "text": "sir we r 9 people and require this entire house for a stay so what are your charges",
+                "intent": "getInventory"
+            },
+            {
+                "text": "let me know if any additional charges will be applicable.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "details of charges",
+                "intent": "getInventory"
+            },
+            {
+                "text": "detail charges ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what will be the cost for 2night stay for 10 adults 2 kids",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what will be final cost for 2 days??",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know how much it will cost for 7 people 2 rooms one night for 7 people",
+                "intent": "getInventory"
+            },
+            {
+                "text": "how much will be the cost for the group of 8",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we are16 members suggest some low cost cottage",
+                "intent": "getInventory"
+            },
+            {
+                "text": "cost for 6 persons and 3 bed rooms",
+                "intent": "getInventory"
+            },
+            {
+                "text": "will it cost extra n will i get mattress for them?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please send your cost details",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can u please reply about your total cost for above details.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "will it be of extra cost?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i have 10 year old kid how much extra will this cost on the specified date.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what would cost us",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is there a place for the driver to stay at the property at a nominal cost for a night as well?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "plz tell me the cost",
+                "intent": "getInventory"
+            },
+            {
+                "text": "total cost (final) of the deal",
+                "intent": "getInventory"
+            },
+            {
+                "text": "cost of the rooms for 2 nights",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what will be the actual cost for d stay ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what will be the cost for 8 guests.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what would be the cost of 10 people can we 10 accommodate in 2 rooms? we r 2 families each of 5.. please let us knw",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly let us know the cost of 2 nights for 3/4 rooms",
+                "intent": "getInventory"
+            },
+            {
+                "text": "pls provide the cost of 3 bedrooms apratment for 2 nights (26th and 27th april )",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly let us know the cost of 2 nights",
+                "intent": "getInventory"
+            },
+            {
+                "text": "how much will be the total cost of the property for 2 nights",
+                "intent": "getInventory"
+            },
+            {
+                "text": "how much the room rent without any hidden cost?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is any service charge applicable?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what's is actual total cost for 3 nights?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "will there be a extra cost if a child of 11yrs accompanies us.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "how come it is zero cost?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please give final total cost considering above details thanks",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can i know the cost for 5 guests and items provided as per the cost. thank you",
+                "intent": "getInventory"
+            },
+            {
+                "text": "and whats the costing ??",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what is the best possible discount",
+                "intent": "getInventory"
+            },
+            {
+                "text": "need tariff details for accomodation",
+                "intent": "getInventory"
+            },
+            {
+                "text": "as you aware that we are planning to come on off season i believe that we should get the room at discounted rate.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please make it 2000",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what is total amount including taxes and amount after final discount",
+                "intent": "getInventory"
+            },
+            {
+                "text": "where should i pay the payment",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what is the tariff for the same ???",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we would.like to.know the tariff on booking for one night",
+                "intent": "getInventory"
+            },
+            {
+                "text": "confirm the tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "want to talk to u regarding tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know what is the tariff for triple rooms",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let know the tariff details.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is tariff negotiable.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "also for 3 your best tariffs be?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "do get back with the tariffs",
+                "intent": "getInventory"
+            },
+            {
+                "text": "tariffs from 8 june to 11 june",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please provide the tariff per night!",
+                "intent": "getInventory"
+            },
+            {
+                "text": "the total tariff calculated along with the details",
+                "intent": "getInventory"
+            },
+            {
+                "text": "what is the special tariff in your apartment?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly quote the best possible tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly advice the best possible tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know the total tariff",
+                "intent": "getInventory"
+            },
+            {
+                "text": "tariff please!?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i will be coming down to ahmedabad for the entire 3rd week of may (15th may-22nd may) to meet my girlfriend wanted to know upfront will that be okay as per your service apartment rules",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "i didn't understand the rule of kids not allowed.",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "what type of restriction you mentioned in rule.",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "so there are certain set of rules regarding unmarried couple stays is the rule same for this place too ?",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "i would like to know about some of your rules",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "my would be husband smokes",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "need occupancy for drink and smoke",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "we drink smoke",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "drink and smoke",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "we r 4 persons we do smoke and drink",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "a few might drink n smoke",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "is the hotel bachelor friendly?",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "is there driver accomadation in it",
+                "intent": "getAmenities"
+            },
+            {
+                "text": "are drinks allowed inside room",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "hi we are group of 5 people boys an girls are we allowed?",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "is there any restriction for couples ...",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "i am going with my girlfriend. is there any restriction?",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "please confirm if you have any restriction to allow stay with my future wife",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "couple can stay...any restriction",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "details of rule regulation",
+                "intent": "getHouseRule"
+            },
+            {
+                "text": "contact for more information",
+                "intent": "getInfo"
+            },
+            {
+                "text": "we wanted few information.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "pl contact me for more information",
+                "intent": "getInfo"
+            },
+            {
+                "text": "need more information about the property",
+                "intent": "getInfo"
+            },
+            {
+                "text": "i need more information on that.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "information about the rooms",
+                "intent": "getInfo"
+            },
+            {
+                "text": "i ask some information about hotel.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "would like to get more information",
+                "intent": "getInfo"
+            },
+            {
+                "text": "need some more information.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "please share more information about the place",
+                "intent": "getInfo"
+            },
+            {
+                "text": "please provide me with this requested information at the earliest",
+                "intent": "getInfo"
+            },
+            {
+                "text": "plz provide me a little bit information",
+                "intent": "getInfo"
+            },
+            {
+                "text": "so i request you if you could contact us for further information",
+                "intent": "getInfo"
+            },
+            {
+                "text": "please send me details of this homestay",
+                "intent": "getInfo"
+            },
+            {
+                "text": "how can we know more details about this hotel",
+                "intent": "getInfo"
+            },
+            {
+                "text": "i want clear details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "can you please send more pics and details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "need accommodation details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "all details about your home stay",
+                "intent": "getInfo"
+            },
+            {
+                "text": "please let meknow complete details bout this.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "i can't see the property details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "can u please give details of the places around there to see",
+                "intent": "getInfo"
+            },
+            {
+                "text": "i would like to get more details on this stay.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "eed more details of your property.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "i wanted to know some more details before booking.",
+                "intent": "getInfo"
+            },
+            {
+                "text": "wanna a full details abt stay",
+                "intent": "getInfo"
+            },
+            {
+                "text": "pls send me details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "want to know some details about the stay",
+                "intent": "getInfo"
+            },
+            {
+                "text": "would like to get few more details from your end",
+                "intent": "getInfo"
+            },
+            {
+                "text": "pls share more photos and other details",
+                "intent": "getInfo"
+            },
+            {
+                "text": "please provide more information about your hotel",
+                "intent": "getInfo"
+            },
+            {
+                "text": "sir can we get the information about rooms",
+                "intent": "getInfo"
+            },
+            {
+                "text": "need to know more details about the property",
+                "intent": "getInfo"
+            },
+            {
+                "text": "send me ur details asap",
+                "intent": "getInfo"
+            },
+            {
+                "text": "so is it available for us",
+                "intent": "getInventory"
+            },
+            {
+                "text": "let me knw if dis is available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi! there's 7 of us visiting gokarna on the 30th of april and checking out on 1st of may. could you please let me know if rooms are available?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi is this property available for mentioned dates",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is the room available.we are 5 people",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know whether the accommodation is available on the mentioned dates or 29th april to 1st may.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we would like to know whether the entire house is available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is your place available for a month in june",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can you pls confirm the availability of dates",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is the apartment available for the above mentioned dates in september.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we will be visiting on the 19th of may. available?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "would your property be available for booking on those dates?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "do you have three rooms available for our date (may 7th 2017)?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please confirm if it is available for requested dates",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is rooms are available as shown in photos?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know if the property is available for the dates .",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we are two adult & one kid looking for one double bed room.is it available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "just tell me that room available in jammu katra(svdk)",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want 2 rooms super delux(double beded) for 2 days i.e 9th may & 10th may 2017' is it available ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "dates are restricted so would love to stay here if june 23 to 25th available.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "the dates are restricted so would love to stay here if it is available.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can you confirm if booking is available for mentioned dates for 7 adults and 4 kids (10 8 8 4 yr old ) .",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly confirm if there are 3 bedrooms available in this apartment property.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is the room available on those dates?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is it available during these dates or not?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please confirm the availability.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know if your place is available for these dates.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is it available for 2 days.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly let us know whether it's available or not?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is there any room available for 2 nights.?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know if it is available on 29th or not.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "could you please let me know if rooms are available?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is this available from 26th to 28th of april ??",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is there rooms available from 25 may to 28 may for 10 persons give your confirmation",
+                "intent": "getInventory"
+            },
+            {
+                "text": "are the rooms available for the above dates.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know if this is available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "are 4 rooms available at your place",
+                "intent": "getInventory"
+            },
+            {
+                "text": "if i book this property any other guest will be there or whole bunglow will be available for my use",
+                "intent": "getInventory"
+            },
+            {
+                "text": "want it for three night stay from 24 th april and check out on 27th april 2017. is it available?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "looking for stay from 29th april to 1st may",
+                "intent": "getInventory"
+            },
+            {
+                "text": "could u pl confirm whether ur property is available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "april 30 & 1may available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please.let me know the package if rooms are.available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "could you please confirm if its available.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please tell me if your place is available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is this still available for 4 adults and 3 kids?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "sir please let me know if there is vacancy of rooms on 29th april to 1st may",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi mr. rishi would your property be available for 4 days starting 3rd may ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "may i know if it is available for booking",
+                "intent": "getInventory"
+            },
+            {
+                "text": "need to check availability of the place",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we need 2 rooms is there any availability?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "availabilityfor 29th april 2017",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is there availability of single bed room for 2 people",
+                "intent": "getInventory"
+            },
+            {
+                "text": "could i know the availability ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "need toknow the availability urgently",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is their availability",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know regarding the availability.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please confirm the availability for 4 people.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know the availability of this property.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know the availability for the mentioned dates",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please know the availability",
+                "intent": "getInventory"
+            },
+            {
+                "text": "request you to let me know about the availability",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please confirm on the availability for the time mentioned.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can you please confirm the availability.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please confirm about the room availibility",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let me know if u have availibility",
+                "intent": "getInventory"
+            },
+            {
+                "text": "do u have availibility for 29th april 1 night also we r 4 adults.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please can u check the availibilty",
+                "intent": "getInventory"
+            },
+            {
+                "text": "would like to check for your place availibilty",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we are 4 people please let us know the availability.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "tommorow room availability is there",
+                "intent": "getInventory"
+            },
+            {
+                "text": "availability on may 3",
+                "intent": "getInventory"
+            },
+            {
+                "text": "let me know the instant availability",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi is there any availability today?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly confirm the availability asap.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "sir plsh let me no their is any vacancy on 20th may",
+                "intent": "getInventory"
+            },
+            {
+                "text": "could you please tell us is there any vacancy to stay",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we need 2 rooms for 5 members\u200b.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "let us know if you have vacancy on mentioned dates.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please provide vacancy",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi sir is there any vacancy on 2nd june",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know about the vacancy",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is there any vacancy?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "pls let us know is there any vacancy in your homestay?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "kindly confirm if there is any vacancy.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "pls advise availability",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please share the availability",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please let us know the availability between the above dates",
+                "intent": "getInventory"
+            },
+            {
+                "text": "please confirm the availability of room",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i need to stay in this cottage for 2 days can you please confirm this availability.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "need this cottage for 2 days on above dates",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hi we are family of 6 members looking for 1 cottage/villa with 3 rooms (fully occupied by us) on 28th april till 30th april.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "13 guest june 20 to 23....quote price for 6 room cottage",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we are interested to stay in your cottage for 2 nights along with 8 members.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is your apartment available on 3rd",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is room available from tomorrow night to 21st.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is this room available from 18 may to 19 may ?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "is the room available today",
+                "intent": "getInventory"
+            },
+            {
+                "text": "room available or not on 27. please let me know.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "can u have possible 24 and 25 room available",
+                "intent": "getInventory"
+            },
+            {
+                "text": "one bed room available?",
+                "intent": "getInventory"
+            },
+            {
+                "text": "sir i want room for 20/05/17 to 15/07/17",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room for 3 people",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want rooms for 6 guests preferrably two big rooms .",
+                "intent": "getInventory"
+            },
+            {
+                "text": "want room for 2night for 10/12people with family",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room on dated 17 th may at 6 am",
+                "intent": "getInventory"
+            },
+            {
+                "text": "want room only for 1 guest...",
+                "intent": "getInventory"
+            },
+            {
+                "text": "want rooms for three tonight... kindly reply",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room to attend my aunt anniversary function",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room for april 30",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we want room for 2 days. sunday & monday",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room for 6 family members pls confirm if u have the same",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we want room from 29th april morning to 1st may for 6 persons.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room for 4 heads for 5 days.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we are 30 guest want rooms",
+                "intent": "getInventory"
+            },
+            {
+                "text": "we want rooms for 5 person. from 29th april to 1st may.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "want room on 6 may 10pm to 7may 10 pm",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room sir totaly 9 member 2days stay in ooty",
+                "intent": "getInventory"
+            },
+            {
+                "text": "i want room for 1 month.",
+                "intent": "getInventory"
+            },
+            {
+                "text": "hello boss",
+                "intent": "Greeting"
+            },
+            {
+                "text": "regarding the location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "as the location is not showing.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "exact location of house.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "could you please share the location and address of this property?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "please send us the complete details of locations address",
+                "intent": "getLocation"
+            },
+            {
+                "text": "pls provide location details.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "please provide the exact address to reach the location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "location based questions",
+                "intent": "getLocation"
+            },
+            {
+                "text": "need more information about the property location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "can you please tell me how far is thefarm location from alibaug st bus stand.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is your location from nainital city centre/ lake.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "sir send me your exact location from airport",
+                "intent": "getLocation"
+            },
+            {
+                "text": "exact location from the dalhosie main.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is location from temple?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "if possible can u just tell me how far is the location from bom church and near by beaches.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far_is ur_location from water sports.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "give me exact location from the mahabodhi temple",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is this location from mall road.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "hi i wanted to know ur location from kajurao airport",
+                "intent": "getLocation"
+            },
+            {
+                "text": "where is this property situated in ooty",
+                "intent": "getLocation"
+            },
+            {
+                "text": "can i get the proper location or adress",
+                "intent": "getLocation"
+            },
+            {
+                "text": "need to talk with you regarding location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "what is the precise location as its not showing properly on makemytrip maps.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "need information about the location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "may i know the exact location of this property?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "can you let us know the exact location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "can you advise the exact location of your place.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "please tell the exact location from madikeri",
+                "intent": "getLocation"
+            },
+            {
+                "text": "i have an query about the location of the place",
+                "intent": "getLocation"
+            },
+            {
+                "text": "want to know exact location of this place",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is the location from the tourist/ site seeking area",
+                "intent": "getLocation"
+            },
+            {
+                "text": "please send me the correct map location through the given number.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "pls provide me with details on the location",
+                "intent": "getLocation"
+            },
+            {
+                "text": "location of the property",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how much distance from dalhousie by car?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how much is the distance from this place to dilwara temple",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is the guest house from the toy train station in terms of distance and time taken..?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "location from ooty main market ?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is this location from city?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far is this location from kasauli city?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "where is the exact location from the jheel in nainital to your rooms.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far the location from station vasco",
+                "intent": "getLocation"
+            },
+            {
+                "text": "also how far is the location from the dimapur railway station?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "i want to know the actual location from shimla bus stand to reach safely and hassle free.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "how far distance from airport",
+                "intent": "getLocation"
+            },
+            {
+                "text": "what's the distance between madgaon rly.station & home stay lodge?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "know me the distance from mall road to your site",
+                "intent": "getLocation"
+            },
+            {
+                "text": "could you please share the exact address of your property",
+                "intent": "getLocation"
+            },
+            {
+                "text": "proper address",
+                "intent": "getLocation"
+            },
+            {
+                "text": "what is the exact address",
+                "intent": "getLocation"
+            },
+            {
+                "text": "address of this location.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "i wish to come with family parents and wife want to know where exactly is this place and its proximity to beaches and good locations.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "what is the proximity of the property to major tourist attractions",
+                "intent": "getLocation"
+            },
+            {
+                "text": "can i know d distance of this homestay from anachal bus stop?",
+                "intent": "getLocation"
+            },
+            {
+                "text": "please inform the distance this accomodation from mall",
+                "intent": "getLocation"
+            },
+            {
+                "text": "what is the distance of proprty from volvo bus stand.",
+                "intent": "getLocation"
+            },
+            {
+                "text": "distance from police bazar & transport available",
+                "intent": "getLocation"
+            },
+            {
+                "text": "i want to know about the distance between the beach and the apartroom",
+                "intent": "getLocation"
+            },
+            {
+                "text": "please guide me how much is distance between naggar bus stand to your hotel",
+                "intent": "getLocation"
+            },
+            {
+                "text": "what is the distance from leh city",
+                "intent": "getLocation"
+            },
+            {
+                "text": "exact location and distance to electronic city phase 1",
+                "intent": "getLocation"
+            },
+            {
+                "text": "can u tell me dat where it is means proper address",
+                "intent": "getLocation"
+            }
+        ]
+    }
+}
